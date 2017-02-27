@@ -1,4 +1,6 @@
-<h1>Surpise!!</h1>
-<p>Moda Foca, {{name}}</p>
-<hr>
-{{input value=name}}
+<h1>Chef Tracker</h1>
+<ul>
+  {{#each chefs as |chef|}}
+    <li>Delicious food cooked by {{chef.name}}. Cooking today: {{chef.avability}}</li>
+  {{/each}}
+</ul>
