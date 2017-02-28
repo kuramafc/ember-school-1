@@ -2,9 +2,13 @@
 <ul>
   {{#each chefs as |chef|}}
     {{#if chef.avability}}
-      <li class="avalable" >Delicious food cooked by {{chef.name}}</li>
+      <li class="avalable" >{{chef.name}}
+        <button {{action 'exit' chef}}>Exit</button>
+      </li>
       {{else}}
-        <li class="not-avalable" >{{chef.name}}</li>
+        <li class="not-avalable" >{{chef.name}}
+          <button {{action 'enter' chef}}>Enter</button>
+        </li>
     {{/if}}
   {{/each}}
 </ul>
